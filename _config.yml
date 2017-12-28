@@ -22,7 +22,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ng-david
 
 sass:
-  sass_dir: css
   style: compressed
 
 # Build settings

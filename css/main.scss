@@ -25,12 +25,18 @@ article.nav {
   li {
     margin: 0rem 2rem;
     margin-bottom: 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    opacity: .5;
+    a {
+      color: $font-light-grey;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+    }
     &.active {
-      opacity: .8;
-      border-bottom: 2px solid #e3e3e3;
+      color: $brand-color;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 2px solid $brand-color;
     }
   }
 }
