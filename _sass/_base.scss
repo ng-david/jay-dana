@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,600|Lora:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 html {
   font-size: 62.5%;
@@ -8,6 +9,7 @@ body {
   font-family: $base-font-family;
   font-size: 1.8rem;
   margin: 0;
+  color: $font-grey;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,18 +20,19 @@ h1 {
   font-family: $heading-font-family;
   font-weight: normal;
 }
+
 h2, h3 {
   font-family: $heading-font-family;
 }
 
 a {
-  transition: ease all .2s;
-  color: $brand-color-light;
-  font-size: 1.8rem;
+  // transition: ease all .2s;
+  color: $brand-color;
+  // font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: bold;
   &:hover {
-    color: $brand-color;
+    color: $brand-color-light;
   }
 }
 
