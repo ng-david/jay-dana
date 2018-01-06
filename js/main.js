@@ -1,9 +1,3 @@
-// Particles
-particlesJS.load('particles-js', 'particlesjs-config.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-
-
 // Countdown timer
 var countDownDate = new Date("May 26, 2018 11:00:00").getTime();
 
@@ -40,41 +34,3 @@ $('#more-link').on('click', function(event) {
         }, 300);
     }
 });
-
-// Waypoints to highlight elements
-// var introWay = new Waypoint({
-//   element: document.getElementById('intro'),
-//   handler: function() {
-//     $('#intro-link').addClass("active");
-//     $('#story-link').removeClass("active");
-//     $('#wedding-link').removeClass("active");
-//     $('#registry-link').removeClass("active");
-//   }
-// });
-// var storyWay = new Waypoint({
-//   element: document.getElementById('story'),
-//   handler: function() {
-//     $('#intro-link').removeClass("active");
-//     $('#story-link').addClass("active");
-//     $('#wedding-link').removeClass("active");
-//     $('#registry-link').removeClass("active");
-//   }
-// });
-// var weddingWay = new Waypoint({
-//   element: document.getElementById('wedding'),
-//   handler: function() {
-//     $('#intro-link').removeClass("active");
-//     $('#story-link').removeClass("active");
-//     $('#wedding-link').addClass("active");
-//     $('#registry-link').removeClass("active");
-//   }
-// });
-// var registry = new Waypoint({
-//   element: document.getElementById('registry'),
-//   handler: function() {
-//     $('#intro-link').removeClass("active");
-//     $('#story-link').removeClass("active");
-//     $('#wedding-link').removeClass("active");
-//     $('#registry-link').addClass("active");
-//   }
-// });
