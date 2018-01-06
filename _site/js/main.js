@@ -28,3 +28,53 @@ var x = setInterval(function() {
     document.getElementById("countdown").innerHTML = "See you there!";
   }
 }, 1000);
+
+// Scroll to element
+/* Script to allow navbar click to scroll to area on page */
+$('#more-link').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 300);
+    }
+});
+
+// Waypoints to highlight elements
+// var introWay = new Waypoint({
+//   element: document.getElementById('intro'),
+//   handler: function() {
+//     $('#intro-link').addClass("active");
+//     $('#story-link').removeClass("active");
+//     $('#wedding-link').removeClass("active");
+//     $('#registry-link').removeClass("active");
+//   }
+// });
+// var storyWay = new Waypoint({
+//   element: document.getElementById('story'),
+//   handler: function() {
+//     $('#intro-link').removeClass("active");
+//     $('#story-link').addClass("active");
+//     $('#wedding-link').removeClass("active");
+//     $('#registry-link').removeClass("active");
+//   }
+// });
+// var weddingWay = new Waypoint({
+//   element: document.getElementById('wedding'),
+//   handler: function() {
+//     $('#intro-link').removeClass("active");
+//     $('#story-link').removeClass("active");
+//     $('#wedding-link').addClass("active");
+//     $('#registry-link').removeClass("active");
+//   }
+// });
+// var registry = new Waypoint({
+//   element: document.getElementById('registry'),
+//   handler: function() {
+//     $('#intro-link').removeClass("active");
+//     $('#story-link').removeClass("active");
+//     $('#wedding-link').removeClass("active");
+//     $('#registry-link').addClass("active");
+//   }
+// });

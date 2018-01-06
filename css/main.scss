@@ -7,6 +7,24 @@
   font-family: $mono-font-family;
 }
 
+canvas {
+	display: block;
+}
+
+img.icon {
+  width: 4rem;
+  margin-bottom: 2rem;
+  opacity: .5;
+}
+
+span.divider {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  border-bottom: 2px dashed $brand-color;
+  opacity: .2;
+}
+
 $nav-width: 35%;
 article.nav {
   min-height: 100vh;
@@ -22,7 +40,7 @@ article.nav {
     position: absolute;
     bottom: 0rem;
     padding: 8rem 4rem 4rem;
-    h1, h2, p, li {
+    h1, h2, p, li a {
       color: white;
     }
     h1 {
@@ -36,17 +54,23 @@ article.nav {
     ul li {
       display: inline-block;
       margin: 0 .8rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-weight: bold;
-      opacity: .4;
-      border-bottom: 2px solid transparent;
-      &:first-child {
-        margin-left: 0;
+      a {
+        opacity: .4;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 2px solid transparent;
+        &:hover {
+          opacity: 1;
+        }
       }
       &.active {
-        opacity: 1;
-        border-bottom: 2px solid white;
+        a {
+          opacity: 1;
+          border-bottom: 2px solid white;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
       }
     }
   }
@@ -65,18 +89,43 @@ article.content {
   }
 }
 
-.page-section {
-  padding: 4rem;
+.white {
+  // padding: 4rem 0;
   background-color: white;
+}
+.page-section {
+  padding: 12rem 8rem;
+  // background-color: white;
+  .heading {
+    text-align: center;
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 4rem;
+    }
+    &.sub {
+      margin-top: 8rem;
+    }
+  }
+  h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
 }
 section.intro {
   height: 100vh;
+  // background-color: $bg-grey;
   // position: relative;
   // width: 100%;
-  #particles-js {
+  canvas.particles-box {
     background-color: $bg-grey;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     position: absolute;
     z-index: -1;
   }
@@ -88,11 +137,6 @@ section.intro {
     display: flex;
     justify-content: center;
     align-items: center;
-    .icon {
-      width: 4rem;
-      margin-bottom: 2rem;
-      opacity: .5;
-    }
     .more-arrow {
       position: absolute;
       bottom: 4rem;
@@ -135,6 +179,15 @@ section.intro {
   }
 }
 
-section.blah {
+section.story {
+  @extend .page-section;
+
+}
+
+section.wedding {
+  @extend .page-section;
+}
+
+section.registry {
   @extend .page-section;
 }
