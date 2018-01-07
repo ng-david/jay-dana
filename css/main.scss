@@ -15,14 +15,25 @@ img.icon {
   width: 4rem;
   margin-bottom: 2rem;
   opacity: .5;
+  &.small {
+    width: 3.2rem;
+  }
 }
 
 span.divider {
   width: 100%;
   margin: 0 auto;
   display: block;
-  border-bottom: 2px dashed $brand-color;
-  opacity: .2;
+  border-bottom: 2px dashed $brand-border;
+}
+
+.papersheet {
+  background-color: white;
+  padding: 4rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 4px 6px 0px $brand-shadow;
+  -moz-box-shadow: 0px 4px 6px 0px $brand-shadow;
+  box-shadow: 0px 4px 6px 0px $brand-shadow;
 }
 
 $nav-width: 35%;
@@ -101,7 +112,7 @@ article.content {
   background-color: white;
 }
 .page-section {
-  padding: 12rem 8rem;
+  padding: 10rem 6rem;
   // background-color: white;
   .heading {
     text-align: center;
@@ -122,6 +133,13 @@ article.content {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     font-weight: bold;
+  }
+  .divider {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+  &.grey {
+    background-color: $bg-grey;
   }
 }
 section.intro {
@@ -172,15 +190,11 @@ section.intro {
         }
       }
     }
-    .papersheet {
-      background-color: white;
-      padding: 8rem;
+    .intro-card {
+      @extend .papersheet;
       min-width: 50rem;
       max-width: 100%;
-      border-radius: 4px;
-      -webkit-box-shadow: 0px 4px 6px 0px $brand-shadow;
-      -moz-box-shadow: 0px 4px 6px 0px $brand-shadow;
-      box-shadow: 0px 4px 6px 0px $brand-shadow;
+      padding: 8rem;
       h1 {
         color: $brand-color-dark;
         margin-bottom: 1rem;
@@ -196,13 +210,62 @@ section.intro {
 
 section.story {
   @extend .page-section;
-
 }
 
 section.wedding {
   @extend .page-section;
+  h2, p {
+    margin-bottom: 4rem;
+  }
+  h3 {
+    color: $brand-color;
+    font-weight: bold;
+  }
+  .papersheet {
+    text-align: center;
+    width: 100%;
+    padding: 6rem;
+    margin-top: 6rem;
+    &:first-child {
+      margin-top: 0rem;
+    }
+    .fa {
+      font-size: 2.6rem;
+      color: $brand-color;
+      opacity: .5;
+      margin-bottom: 2.2rem;
+    }
+    .left {
+      padding-right: 6rem;
+    }
+    .right {
+      padding-left: 6rem;
+      border-left: 2px dashed $brand-border;
+    }
+  }
+  .person {
+    transition: ease all .3s;
+    margin-bottom: 6rem;
+    .avatar {
+      margin-bottom: 2rem;
+      width: 12rem;
+      border-radius: 50%;
+    }
+    &:hover {
+      opacity: .5;
+    }
+  }
 }
 
 section.registry {
   @extend .page-section;
+}
+
+section.footer {
+  padding: 2rem 6rem;
+  background-color: $bg-grey;
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
 }
