@@ -35,7 +35,16 @@ $(window).scroll(function(){
    cur = cur[cur.length-1];
    var id = cur && cur.length ? cur[0].id : "";
 
+   // DAVID mods
+   // Force registry id if bottom of page met
+   if($(window).scrollTop() + $(window).height() >= getDocHeight() - 30) {
+       id = "registry";
+   }
+   // DAVID MOD change bg to chapel
+
    if (lastId !== id) {
+     updateNavBg(id, lastId);
+
        lastId = id;
        // Set/remove active class
        menuItems
@@ -43,3 +52,22 @@ $(window).scroll(function(){
          .end().filter("[href='#"+id+"']").parent().addClass("active");
    }
 });
+
+function updateNavBg(id, lastId) {
+  if (id === "wedding") {
+    $('#nav').css('background-image', 'url("/img/chapel.jpg")');
+  } else {
+    if (lastId === "wedding") {
+      $('#nav').css('background-image', 'url("/img/bg.jpg")');
+    }
+  }
+}
+
+function getDocHeight() {
+    var D = document;
+    return Math.max(
+        D.body.scrollHeight, D.documentElement.scrollHeight,
+        D.body.offsetHeight, D.documentElement.offsetHeight,
+        D.body.clientHeight, D.documentElement.clientHeight
+    );
+}

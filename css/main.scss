@@ -11,6 +11,10 @@ canvas {
 	display: block;
 }
 
+.marginless {
+  margin-bottom: 0 !important;
+}
+
 img.icon {
   width: 4rem;
   margin-bottom: 2rem;
@@ -41,7 +45,8 @@ article.nav {
   min-height: 100vh;
   height: 100%;
   width: $nav-width;
-  background-color: grey;
+  background-color: $brand-color-dark;
+  transition: ease background-image .5s;
   background-image: url('/img/bg.jpg');
   background-size: cover;
   position: fixed;
@@ -215,25 +220,20 @@ section.story {
 section.wedding {
   @extend .page-section;
   h2, p {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   h3 {
-    color: $brand-color;
+    // color: $brand-color;
     font-weight: bold;
+    margin-bottom: 1rem;
   }
   .papersheet {
-    text-align: center;
+    // text-align: center;
     width: 100%;
     padding: 6rem;
     margin-top: 6rem;
     &:first-child {
       margin-top: 0rem;
-    }
-    .fa {
-      font-size: 2.6rem;
-      color: $brand-color;
-      opacity: .5;
-      margin-bottom: 2.2rem;
     }
     .left {
       padding-right: 6rem;
@@ -242,21 +242,68 @@ section.wedding {
       padding-left: 6rem;
       border-left: 2px dashed $brand-border;
     }
+    section {
+      margin-bottom: 4rem;
+    }
+  }
+  // .person {
+  //   transition: ease all .3s;
+  //   margin-bottom: 6rem;
+  //   .avatar {
+  //     margin-bottom: 2rem;
+  //     width: 12rem;
+  //     border-radius: 50%;
+  //   }
+  //   &:hover {
+  //     opacity: .5;
+  //   }
+  // }
+}
+
+section.wedding-party {
+  @extend .page-section;
+  .small-heading {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .fa-mars, .fa-venus {
+    font-size: 2.6rem;
+    color: $brand-color;
+    opacity: .5;
+    margin-bottom: 2.2rem;
   }
   .person {
-    transition: ease all .3s;
-    margin-bottom: 6rem;
-    .avatar {
-      margin-bottom: 2rem;
-      width: 12rem;
-      border-radius: 50%;
+    padding: 4rem;
+    margin-top: 4rem;
+    border-radius: 4px;
+    border: 2px dashed $brand-border;
+    .person-intro {
+      text-align: center;
+      img {
+        width: 14rem;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+        border: 2px dashed $brand-border;
+        padding: 1rem;
+      }
+      &.special {
+        margin-top: 1rem;
+        img {
+          border: 2px dashed $brand-border;
+        }
+      }
     }
-    &:hover {
-      opacity: .5;
+    h3.tag {
+      background-color: $bg-grey;
+      padding: 6px 6px;
+      border-radius: 2px;
+    }
+    h3 {
+      font-weight: bold;
+      margin-bottom: 2rem;
     }
   }
 }
-
 section.registry {
   @extend .page-section;
 }
