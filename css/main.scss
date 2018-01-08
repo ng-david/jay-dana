@@ -50,6 +50,11 @@ article.nav {
   background-image: url('/img/bg.jpg');
   background-size: cover;
   position: fixed;
+  #second-bg {
+    opacity: 0;
+    transition: ease all .5s;
+    width: 100%;
+  }
   section.blurb {
     background: linear-gradient(to top, $brand-color-dark, transparent);
     width: 100%;

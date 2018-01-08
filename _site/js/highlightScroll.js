@@ -36,15 +36,14 @@ $(window).scroll(function(){
    var id = cur && cur.length ? cur[0].id : "";
 
    // DAVID mods
-   // Force registry id if bottom of page met
+   // Force registry id if bottom of page met (by 30px to fix safari bounce)
    if($(window).scrollTop() + $(window).height() >= getDocHeight() - 30) {
        id = "registry";
    }
-   // DAVID MOD change bg to chapel
 
    if (lastId !== id) {
-     updateNavBg(id, lastId);
-
+       // DAVID: Only change background if changed section
+       updateNavBg(id, lastId);
        lastId = id;
        // Set/remove active class
        menuItems
@@ -53,16 +52,23 @@ $(window).scroll(function(){
    }
 });
 
+// DAVID's function to update nav background
 function updateNavBg(id, lastId) {
+  // If switching into wedding section
   if (id === "wedding") {
-    $('#nav').css('background-image', 'url("/img/chapel.jpg")');
+    $('#second-bg').css('opacity', '1')
+    // $('#nav').css('background-image', 'url("/img/chapel.jpg")');
   } else {
+    // If switching out of wedding section
     if (lastId === "wedding") {
-      $('#nav').css('background-image', 'url("/img/bg.jpg")');
+      $('#second-bg').css('opacity', '0')
+
+      // $('#nav').css('background-image', 'url("/img/bg.jpg")');
     }
   }
 }
 
+// Helper function
 function getDocHeight() {
     var D = document;
     return Math.max(
