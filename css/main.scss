@@ -225,6 +225,12 @@ section.intro {
 
 section.story {
   @extend .page-section;
+  section {
+    margin-top: 2rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 section.wedding {
@@ -296,11 +302,6 @@ section.wedding-party {
           border: 2px dashed $brand-border;
         }
       }
-    }
-    h3.tag {
-      background-color: $bg-grey;
-      padding: 6px 6px;
-      border-radius: 2px;
     }
     h3 {
       font-weight: bold;
