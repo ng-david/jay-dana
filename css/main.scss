@@ -342,9 +342,22 @@ section.registry {
 
 section.footer {
   padding: 2rem 6rem;
+  border-top: 2px dashed $brand-border;
   background-color: $bg-grey;
   p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin: 0;
+    opacity: .5;
+  }
+  .blurb {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 991.99px) {
+      display: inline;
+      text-align: center;
+      p {
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
