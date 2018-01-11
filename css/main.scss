@@ -20,7 +20,7 @@ img.icon {
   margin-bottom: 2rem;
   opacity: .5;
   &.small {
-    width: 3.2rem;
+    width: 4rem;
   }
 }
 
@@ -38,6 +38,9 @@ span.divider {
   -webkit-box-shadow: 0px 4px 6px 0px $brand-shadow;
   -moz-box-shadow: 0px 4px 6px 0px $brand-shadow;
   box-shadow: 0px 4px 6px 0px $brand-shadow;
+  @media (max-width: 991.99px) {
+    padding: 4rem;
+  }
 }
 
 $nav-width: 35%;
@@ -74,7 +77,7 @@ article.nav {
     }
     ul li {
       display: inline-block;
-      margin: 0 .8rem;
+      margin: 0rem 1.6rem 1.6rem 0rem;
       a {
         opacity: .4;
         text-transform: uppercase;
@@ -100,10 +103,18 @@ article.nav {
     right: 0;
     height: 100%;
     width: 2rem;
-    background: linear-gradient(to left, rgba(0,0,0,.07), transparent);
+    background: linear-gradient(to left, rgba(0,0,0,.1), transparent);
   }
   @media (max-width: 991.99px) {
-    display: none;
+    width: 100%;
+    position: static;
+    height: 100vh;
+    .right-shadow {
+      display: none;
+    }
+    section.blurb {
+      text-align: center;
+    }
   }
 }
 article.content {
@@ -156,6 +167,9 @@ article.content {
   &.grey {
     background-color: $bg-grey;
   }
+  @media (max-width: 991.99px) {
+    padding: 6rem 2rem;
+  }
 }
 section.intro {
   height: 100vh;
@@ -207,8 +221,8 @@ section.intro {
     }
     .intro-card {
       @extend .papersheet;
-      min-width: 50rem;
-      max-width: 100%;
+      // min-width: 50rem;
+      max-width: 95%;
       padding: 8rem;
       h1 {
         color: $brand-color-dark;
@@ -231,49 +245,57 @@ section.story {
       margin-top: 0;
     }
   }
+  .image-row {
+    img {
+      max-width: 100%;
+      padding: 1rem;
+      border: 2px dashed $brand-border;
+      margin-bottom: 4rem;
+    }
+  }
 }
 
 section.wedding {
   @extend .page-section;
-  h2, p {
-    margin-bottom: 2rem;
+  p {
+    margin-bottom: 4rem;
+  }
+  h2 {
+    margin-bottom: 6rem;
   }
   h3 {
     // color: $brand-color;
     font-weight: bold;
+    text-transform: uppercase;
     margin-bottom: 1rem;
   }
   .papersheet {
-    // text-align: center;
     width: 100%;
-    padding: 6rem;
+    // padding: 6rem;
     margin-top: 6rem;
     &:first-child {
       margin-top: 0rem;
     }
     .left {
-      padding-right: 6rem;
+      padding-right: 4rem;
     }
     .right {
-      padding-left: 6rem;
+      padding-left: 4rem;
       border-left: 2px dashed $brand-border;
     }
     section {
       margin-bottom: 4rem;
     }
+    @media (max-width: 991.99px) {
+      .left {
+        padding-right: 1.5rem;
+      }
+      .right {
+        padding-left: 1.5rem;
+        border: none;
+      }
+    }
   }
-  // .person {
-  //   transition: ease all .3s;
-  //   margin-bottom: 6rem;
-  //   .avatar {
-  //     margin-bottom: 2rem;
-  //     width: 12rem;
-  //     border-radius: 50%;
-  //   }
-  //   &:hover {
-  //     opacity: .5;
-  //   }
-  // }
 }
 
 section.wedding-party {
@@ -306,6 +328,11 @@ section.wedding-party {
     h3 {
       font-weight: bold;
       margin-bottom: 2rem;
+    }
+  }
+  @media (max-width: 991.99px) {
+    .right {
+      margin-top: 6rem;
     }
   }
 }
