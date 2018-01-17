@@ -245,12 +245,19 @@ section.story {
       margin-top: 0;
     }
   }
+  p {
+    margin-bottom: 4rem;
+  }
   .image-row {
     img {
       max-width: 100%;
       padding: 1rem;
       border: 2px dashed $brand-border;
+      transition: ease all .3s;
       margin-bottom: 4rem;
+      &:hover {
+        border-color: $brand-color;
+      }
     }
   }
 }
@@ -311,18 +318,11 @@ section.wedding-party {
     border: 2px dashed $brand-border;
     .person-intro {
       text-align: center;
-      img {
-        width: 14rem;
-        border-radius: 50%;
-        margin-bottom: 2rem;
-        border: 2px dashed $brand-border;
-        padding: 1rem;
-      }
       &.special {
         margin-top: 1rem;
-        img {
-          border: 2px dashed $brand-border;
-        }
+        // img {
+          // border: 2px dashed $brand-border;
+        // }
       }
     }
     h3 {
@@ -330,7 +330,18 @@ section.wedding-party {
       margin-bottom: 2rem;
     }
   }
-  @media (max-width: 991.99px) {
+  img {
+    width: 14rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: 2px dashed $brand-border;
+    padding: 1rem;
+    transition: ease all .3s;
+    &:hover {
+      border-color: $brand-color;
+    }
+  }
+  @media (max-width: 767px) {
     .right {
       margin-top: 6rem;
     }
