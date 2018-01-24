@@ -313,9 +313,8 @@ section.wedding-party {
   }
   .person {
     padding: 4rem;
-    margin-top: 4rem;
+    // margin-top: 4rem;
     border-radius: 4px;
-    border: 2px dashed $brand-border;
     .person-intro {
       text-align: center;
       &.special {
@@ -328,6 +327,32 @@ section.wedding-party {
     h3 {
       font-weight: bold;
       margin-bottom: 2rem;
+    }
+  }
+  .mobile-ppl {
+    @media (min-width: 576px) {
+      display: none;
+    }
+    @media (max-width: 575px) {
+      display: inline
+    }
+  }
+  .non-mobile-ppl {
+    .ppl-row {
+      display: flex;
+      .heading {
+        width: 50%;
+      }
+      .person {
+        border-right: 2px dashed $brand-border;
+        width: 50%;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+    @media (max-width: 575px) {
+      display: none;
     }
   }
   img {
