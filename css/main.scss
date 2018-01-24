@@ -107,7 +107,7 @@ article.nav {
   }
   @media (max-width: 991.99px) {
     width: 100%;
-    position: static;
+    position: relative;
     height: 100vh;
     .right-shadow {
       display: none;
@@ -125,6 +125,7 @@ article.content {
   @media (max-width: 991.99px) {
     width: 100vw;
     left: 0;
+    position: relative;
   }
 }
 
@@ -173,9 +174,6 @@ article.content {
 }
 section.intro {
   height: 100vh;
-  // background-color: $bg-grey;
-  // position: relative;
-  // width: 100%;
   canvas.particles-box {
     background-color: $bg-grey;
     // width: 100%;
