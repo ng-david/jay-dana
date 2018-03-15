@@ -50,7 +50,8 @@ article.nav {
   width: $nav-width;
   background-color: $brand-color-dark;
   transition: ease background-image .5s;
-  background-image: url('/img/bg.jpg');
+  background-position: center;
+  background-image: url('/img/bg copy.jpg');
   background-size: cover;
   position: fixed;
   #second-bg {
@@ -75,13 +76,22 @@ article.nav {
       margin-bottom: 1rem;
     }
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
+      font-size: 2rem;
+      display: inline-block;
+      margin-bottom: 4rem;
+      opacity: .7;
+      &.hash {
+        font-weight: bold;
+        opacity: 1;
+        // font-size: 2.4rem;
+        // font-weight: bold;
+      }
     }
     ul li {
       display: inline-block;
       margin: 0rem 1.6rem 1.6rem 0rem;
       a {
+        font-size: 1.6rem;
         opacity: .4;
         text-transform: uppercase;
         font-weight: bold;
@@ -99,6 +109,14 @@ article.nav {
       &:first-child {
         margin-left: 0;
       }
+      span.photos-link {
+        @extend a;
+        &:hover {
+          color: white;
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
     }
   }
   div.right-shadow {
@@ -111,7 +129,7 @@ article.nav {
   @media (max-width: 991.99px) {
     width: 100%;
     position: relative;
-    height: 100vh;
+    height: 60vh;
     .right-shadow {
       display: none;
     }
@@ -241,6 +259,10 @@ section.intro {
         color: $brand-color-dark;
         margin-bottom: 1rem;
       }
+      h2 {
+        font-size: 2.2rem;
+        color: $brand-color-light;
+      }
       .countdown {
         @extend .mono-font;
         opacity: .5;
@@ -264,12 +286,12 @@ section.story {
   .image-row {
     img {
       max-width: 100%;
-      padding: 1rem;
-      border: 2px dashed $brand-border;
-      transition: ease all .3s;
+      // padding: 1rem;
+      // border: 2px dashed $brand-border;
+      transition: ease all .1s;
       margin-bottom: 4rem;
       &:hover {
-        border-color: $brand-color;
+        opacity: .8;
       }
     }
   }
@@ -372,11 +394,12 @@ section.wedding-party {
     width: 14rem;
     border-radius: 50%;
     margin-bottom: 2rem;
-    border: 2px dashed $brand-border;
-    padding: 1rem;
-    transition: ease all .3s;
+    // border: 2px dashed $brand-border;
+    // padding: 1rem;
+    transition: ease all .1s;
     &:hover {
-      border-color: $brand-color;
+      opacity: .8;
+      // border-color: $brand-color;
     }
   }
   @media (max-width: 767px) {

@@ -43,7 +43,7 @@ $(window).scroll(function(){
 
    if (lastId !== id) {
        // DAVID: Only change background if changed section
-       updateNavBg(id, lastId);
+       // updateNavBg(id, lastId);
        lastId = id;
        // Set/remove active class
        menuItems
