@@ -394,12 +394,11 @@ section.wedding-party {
     width: 14rem;
     border-radius: 50%;
     margin-bottom: 2rem;
-    // border: 2px dashed $brand-border;
-    // padding: 1rem;
-    transition: ease all .1s;
+    border: 2px dashed $brand-border;
+    padding: 1rem;
+    transition: ease all .3s;
     &:hover {
-      opacity: .8;
-      // border-color: $brand-color;
+      border-color: $brand-color;
     }
   }
   @media (max-width: 767px) {
@@ -408,6 +407,7 @@ section.wedding-party {
     }
   }
 }
+
 section.registry {
   @extend .page-section;
 }
