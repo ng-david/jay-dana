@@ -394,8 +394,8 @@ section.wedding-party {
     width: 14rem;
     border-radius: 50%;
     margin-bottom: 2rem;
-    border: 2px dashed $brand-border;
-    padding: 1rem;
+    // border: 2px dashed $brand-border;
+    // padding: 1rem;
     transition: ease all .3s;
     &:hover {
       border-color: $brand-color;
